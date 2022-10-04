@@ -1,0 +1,13 @@
+[package]
+name = "unsafe-fields"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+unsafe-fields-internal = { path = "./unsafe-fields-internal", optional = true }
+
+[features]
+default = ["attr"]
+attr = ["dep:unsafe-fields-internal"]
